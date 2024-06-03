@@ -1,0 +1,200 @@
+Namespace(no_train=False, train_batch_size=8, eval_batch_size=8, lr=0.0001, num_epochs=20, log_step=100, no_cuda=False, word_embedding_dim=300, use_pretrained=True, use_postag=True, postag_embedding_dim=25, hidden_size=512, dropout_rate=0.5)
+Epoch 1|20:
+Batch 1|1608: loss 3.5307 f1 0.00 precision 0.00 recall 0.00
+Batch 101|1608: loss 0.1768 f1 0.00 precision 0.00 recall 0.00
+Batch 201|1608: loss 0.1194 f1 0.00 precision 0.00 recall 0.00
+Namespace(no_train=False, train_batch_size=8, eval_batch_size=8, lr=0.0001, num_epochs=20, log_step=100, no_cuda=False, word_embedding_dim=300, use_pretrained=True, use_postag=True, postag_embedding_dim=25, hidden_size=512, dropout_rate=0.5)
+Epoch 1|20:
+Batch 1|1608: loss 3.5143 f1 0.00 precision 0.00 recall 0.00
+Batch 301|1608: loss 0.0219 f1 0.00 precision 0.00 recall 0.00
+Batch 101|1608: loss 0.0312 f1 0.00 precision 0.00 recall 0.00
+Batch 401|1608: loss 0.1496 f1 0.00 precision 0.00 recall 0.00
+Batch 201|1608: loss 0.0546 f1 0.00 precision 0.00 recall 0.00
+Batch 501|1608: loss 0.1237 f1 0.00 precision 0.00 recall 0.00
+Batch 301|1608: loss 0.1625 f1 0.00 precision 0.00 recall 0.00
+Batch 601|1608: loss 0.1688 f1 0.00 precision 0.00 recall 0.00
+Batch 401|1608: loss 0.0249 f1 0.00 precision 0.00 recall 0.00
+Batch 701|1608: loss 0.0444 f1 0.00 precision 0.00 recall 0.00
+Batch 501|1608: loss 0.1374 f1 0.00 precision 0.00 recall 0.00
+Batch 801|1608: loss 0.1156 f1 66.67 precision 100.00 recall 50.00
+Batch 601|1608: loss 0.0889 f1 0.00 precision 0.00 recall 0.00
+Batch 901|1608: loss 0.0974 f1 57.14 precision 100.00 recall 40.00
+Batch 701|1608: loss 0.0882 f1 0.00 precision 0.00 recall 0.00
+Batch 1001|1608: loss 0.0174 f1 66.67 precision 100.00 recall 50.00
+Batch 801|1608: loss 0.1522 f1 0.00 precision 0.00 recall 0.00
+Batch 1101|1608: loss 0.2873 f1 40.00 precision 100.00 recall 25.00
+Batch 901|1608: loss 0.0680 f1 0.00 precision 0.00 recall 0.00
+Batch 1201|1608: loss 0.1146 f1 33.33 precision 50.00 recall 25.00
+Batch 1001|1608: loss 0.1182 f1 0.00 precision 0.00 recall 0.00
+Batch 1301|1608: loss 0.1555 f1 0.00 precision 0.00 recall 0.00
+Batch 1101|1608: loss 0.1290 f1 0.00 precision 0.00 recall 0.00
+Batch 1201|1608: loss 0.0886 f1 75.00 precision 100.00 recall 60.00
+Batch 1301|1608: loss 0.0991 f1 0.00 precision 0.00 recall 0.00
+Batch 1401|1608: loss 0.0358 f1 0.00 precision 0.00 recall 0.00
+Batch 1501|1608: loss 0.0976 f1 28.57 precision 50.00 recall 20.00
+Batch 1601|1608: loss 0.1094 f1 71.43 precision 83.33 recall 62.50
+Batch 1608|1608: loss 0.0308 f1 0.00 precision 0.00 recall 0.00
+Train: loss 0.1576 f1 14.55 precision 23.26 recall 11.87
+Time: 2398.43
+Dev: loss 0.0748 f1 34.30 precision 60.91 recall 23.87
+Save model weight!
+
+Epoch 2|20:
+Batch 1|1608: loss 0.0491 f1 66.67 precision 100.00 recall 50.00
+Batch 101|1608: loss 0.0465 f1 0.00 precision 0.00 recall 0.00
+Batch 201|1608: loss 0.0837 f1 0.00 precision 0.00 recall 0.00
+Batch 301|1608: loss 0.0152 f1 0.00 precision 0.00 recall 0.00
+Batch 401|1608: loss 0.0362 f1 66.67 precision 100.00 recall 50.00
+Batch 501|1608: loss 0.0103 f1 0.00 precision 0.00 recall 0.00
+Batch 601|1608: loss 0.0171 f1 85.71 precision 75.00 recall 100.00
+Batch 701|1608: loss 0.0370 f1 100.00 precision 100.00 recall 100.00
+Batch 801|1608: loss 0.1316 f1 0.00 precision 0.00 recall 0.00
+Namespace(no_train=False, train_batch_size=8, eval_batch_size=8, lr=0.0001, num_epochs=20, log_step=100, no_cuda=False, word_embedding_dim=300, use_pretrained=True, use_postag=True, postag_embedding_dim=25, hidden_size=512, dropout_rate=0.5)
+Epoch 1|20:
+Batch 1|1608: loss 3.4931 f1 0.00 precision 0.00 recall 0.00
+Batch 101|1608: loss 0.1399 f1 0.00 precision 0.00 recall 0.00
+Batch 201|1608: loss 0.3173 f1 0.00 precision 0.00 recall 0.00
+Batch 301|1608: loss 0.0630 f1 0.00 precision 0.00 recall 0.00
+Batch 401|1608: loss 0.2338 f1 0.00 precision 0.00 recall 0.00
+Batch 501|1608: loss 0.1420 f1 28.57 precision 50.00 recall 20.00
+Batch 601|1608: loss 0.0830 f1 0.00 precision 0.00 recall 0.00
+Batch 701|1608: loss 0.1258 f1 0.00 precision 0.00 recall 0.00
+Batch 801|1608: loss 0.1590 f1 57.14 precision 100.00 recall 40.00
+Batch 901|1608: loss 0.1593 f1 0.00 precision 0.00 recall 0.00
+Batch 1001|1608: loss 0.2442 f1 0.00 precision 0.00 recall 0.00
+Batch 1101|1608: loss 0.0683 f1 0.00 precision 0.00 recall 0.00
+Batch 1201|1608: loss 0.0851 f1 40.00 precision 100.00 recall 25.00
+Batch 1301|1608: loss 0.0876 f1 33.33 precision 50.00 recall 25.00
+Batch 1401|1608: loss 0.0365 f1 50.00 precision 50.00 recall 50.00
+Batch 1501|1608: loss 0.0260 f1 0.00 precision 0.00 recall 0.00
+Batch 1601|1608: loss 0.0454 f1 50.00 precision 50.00 recall 50.00
+Batch 1608|1608: loss 0.0159 f1 0.00 precision 0.00 recall 0.00
+Train: loss 0.1571 f1 15.43 precision 24.68 recall 12.71
+Time: 1124.58
+Dev: loss 0.0731 f1 36.53 precision 60.81 recall 26.10
+Save model weight!
+
+Epoch 2|20:
+Batch 1|1608: loss 0.0768 f1 50.00 precision 66.67 recall 40.00
+Batch 101|1608: loss 0.0786 f1 60.00 precision 50.00 recall 75.00
+Batch 201|1608: loss 0.0105 f1 100.00 precision 100.00 recall 100.00
+Batch 301|1608: loss 0.0436 f1 85.71 precision 100.00 recall 75.00
+Batch 401|1608: loss 0.0527 f1 80.00 precision 100.00 recall 66.67
+Batch 501|1608: loss 0.0397 f1 0.00 precision 0.00 recall 0.00
+Batch 601|1608: loss 0.0436 f1 85.71 precision 100.00 recall 75.00
+Batch 701|1608: loss 0.0262 f1 85.71 precision 100.00 recall 75.00
+Batch 801|1608: loss 0.0157 f1 100.00 precision 100.00 recall 100.00
+Batch 901|1608: loss 0.0362 f1 50.00 precision 50.00 recall 50.00
+Batch 1001|1608: loss 0.0181 f1 0.00 precision 0.00 recall 0.00
+Batch 1101|1608: loss 0.1164 f1 0.00 precision 0.00 recall 0.00
+Batch 1201|1608: loss 0.1329 f1 54.55 precision 60.00 recall 50.00
+Batch 1301|1608: loss 0.0177 f1 0.00 precision 0.00 recall 0.00
+Batch 1401|1608: loss 0.1097 f1 50.00 precision 66.67 recall 40.00
+Batch 1501|1608: loss 0.0250 f1 66.67 precision 100.00 recall 50.00
+Batch 1601|1608: loss 0.0245 f1 100.00 precision 100.00 recall 100.00
+Batch 1608|1608: loss 0.0023 f1 0.00 precision 0.00 recall 0.00
+Train: loss 0.0728 f1 37.67 precision 49.09 recall 34.11
+Time: 2834.88
+Dev: loss 0.0605 f1 47.71 precision 57.54 recall 40.75
+Save model weight!
+
+Epoch 3|20:
+Batch 1|1608: loss 0.0877 f1 50.00 precision 50.00 recall 50.00
+Batch 101|1608: loss 0.0660 f1 0.00 precision 0.00 recall 0.00
+Batch 201|1608: loss 0.0492 f1 57.14 precision 66.67 recall 50.00
+Batch 301|1608: loss 0.0399 f1 0.00 precision 0.00 recall 0.00
+Batch 401|1608: loss 0.0378 f1 50.00 precision 100.00 recall 33.33
+Batch 501|1608: loss 0.0461 f1 66.67 precision 75.00 recall 60.00
+Batch 601|1608: loss 0.0327 f1 0.00 precision 0.00 recall 0.00
+Batch 701|1608: loss 0.0145 f1 80.00 precision 100.00 recall 66.67
+Batch 801|1608: loss 0.0357 f1 0.00 precision 0.00 recall 0.00
+Batch 901|1608: loss 0.0766 f1 0.00 precision 0.00 recall 0.00
+Batch 1001|1608: loss 0.0209 f1 0.00 precision 0.00 recall 0.00
+Batch 1101|1608: loss 0.0935 f1 54.55 precision 60.00 recall 50.00
+Batch 1201|1608: loss 0.0820 f1 60.00 precision 100.00 recall 42.86
+Batch 1301|1608: loss 0.0210 f1 66.67 precision 100.00 recall 50.00
+Batch 1401|1608: loss 0.0155 f1 85.71 precision 100.00 recall 75.00
+Batch 1501|1608: loss 0.0104 f1 100.00 precision 100.00 recall 100.00
+Batch 1601|1608: loss 0.0402 f1 85.71 precision 100.00 recall 75.00
+Batch 1608|1608: loss 0.0094 f1 0.00 precision 0.00 recall 0.00
+Train: loss 0.0609 f1 43.65 precision 53.57 recall 40.83
+Time: 1362.77
+Dev: loss 0.0556 f1 53.59 precision 57.20 recall 50.42
+Save model weight!
+
+Epoch 4|20:
+Batch 1|1608: loss 0.1130 f1 40.00 precision 33.33 recall 50.00
+Batch 101|1608: loss 0.0096 f1 0.00 precision 0.00 recall 0.00
+Batch 201|1608: loss 0.1060 f1 62.50 precision 62.50 recall 62.50
+Batch 301|1608: loss 0.0106 f1 0.00 precision 0.00 recall 0.00
+Batch 401|1608: loss 0.0632 f1 28.57 precision 50.00 recall 20.00
+Batch 501|1608: loss 0.0580 f1 0.00 precision 0.00 recall 0.00
+Batch 601|1608: loss 0.0081 f1 100.00 precision 100.00 recall 100.00
+Batch 701|1608: loss 0.0557 f1 57.14 precision 66.67 recall 50.00
+Batch 801|1608: loss 0.0550 f1 50.00 precision 50.00 recall 50.00
+Batch 901|1608: loss 0.1196 f1 33.33 precision 100.00 recall 20.00
+Batch 1001|1608: loss 0.0782 f1 75.00 precision 75.00 recall 75.00
+Batch 1101|1608: loss 0.0228 f1 88.89 precision 80.00 recall 100.00
+Batch 1201|1608: loss 0.0107 f1 66.67 precision 66.67 recall 66.67
+Batch 1301|1608: loss 0.1611 f1 66.67 precision 100.00 recall 50.00
+Batch 1401|1608: loss 0.0276 f1 66.67 precision 100.00 recall 50.00
+Batch 1501|1608: loss 0.0604 f1 60.00 precision 60.00 recall 60.00
+Batch 1601|1608: loss 0.0485 f1 50.00 precision 100.00 recall 33.33
+Batch 1608|1608: loss 0.0142 f1 100.00 precision 100.00 recall 100.00
+Train: loss 0.0535 f1 47.17 precision 55.51 recall 45.20
+Time: 1361.66
+Dev: loss 0.0533 f1 51.63 precision 60.96 recall 44.77
+
+Epoch 5|20:
+Batch 1|1608: loss 0.0539 f1 57.14 precision 100.00 recall 40.00
+Batch 101|1608: loss 0.0363 f1 60.00 precision 60.00 recall 60.00
+Batch 201|1608: loss 0.0123 f1 0.00 precision 0.00 recall 0.00
+Batch 301|1608: loss 0.0462 f1 50.00 precision 50.00 recall 50.00
+Batch 401|1608: loss 0.1315 f1 50.00 precision 66.67 recall 40.00
+Batch 501|1608: loss 0.0273 f1 0.00 precision 0.00 recall 0.00
+Batch 601|1608: loss 0.0265 f1 33.33 precision 25.00 recall 50.00
+Batch 701|1608: loss 0.0609 f1 40.00 precision 33.33 recall 50.00
+Batch 801|1608: loss 0.0495 f1 66.67 precision 100.00 recall 50.00
+Batch 901|1608: loss 0.0222 f1 0.00 precision 0.00 recall 0.00
+Batch 1001|1608: loss 0.0479 f1 33.33 precision 100.00 recall 20.00
+Batch 1101|1608: loss 0.0182 f1 50.00 precision 100.00 recall 33.33
+Batch 1201|1608: loss 0.0535 f1 50.00 precision 66.67 recall 40.00
+Batch 1301|1608: loss 0.1690 f1 50.00 precision 50.00 recall 50.00
+Batch 1401|1608: loss 0.0379 f1 80.00 precision 66.67 recall 100.00
+Batch 1501|1608: loss 0.0392 f1 66.67 precision 100.00 recall 50.00
+Batch 1601|1608: loss 0.0248 f1 0.00 precision 0.00 recall 0.00
+Batch 1608|1608: loss 0.0310 f1 100.00 precision 100.00 recall 100.00
+Train: loss 0.0478 f1 51.21 precision 59.01 recall 49.77
+Time: 1373.45
+Dev: loss 0.0535 f1 52.21 precision 56.59 recall 48.46
+
+Epoch 6|20:
+Batch 1|1608: loss 0.0142 f1 80.00 precision 100.00 recall 66.67
+Batch 101|1608: loss 0.0120 f1 100.00 precision 100.00 recall 100.00
+Batch 201|1608: loss 0.0167 f1 66.67 precision 100.00 recall 50.00
+Batch 301|1608: loss 0.0111 f1 100.00 precision 100.00 recall 100.00
+Batch 401|1608: loss 0.0298 f1 0.00 precision 0.00 recall 0.00
+Batch 501|1608: loss 0.0032 f1 0.00 precision 0.00 recall 0.00
+Batch 601|1608: loss 0.0069 f1 100.00 precision 100.00 recall 100.00
+Batch 701|1608: loss 0.1082 f1 72.73 precision 100.00 recall 57.14
+Batch 801|1608: loss 0.0787 f1 40.00 precision 50.00 recall 33.33
+Batch 901|1608: loss 0.0389 f1 0.00 precision 0.00 recall 0.00
+Batch 1001|1608: loss 0.0955 f1 66.67 precision 100.00 recall 50.00
+Batch 1101|1608: loss 0.0058 f1 100.00 precision 100.00 recall 100.00
+Batch 1201|1608: loss 0.0410 f1 57.14 precision 66.67 recall 50.00
+Batch 1301|1608: loss 0.0112 f1 0.00 precision 0.00 recall 0.00
+Batch 1401|1608: loss 0.0396 f1 50.00 precision 33.33 recall 100.00
+Batch 1501|1608: loss 0.0422 f1 66.67 precision 66.67 recall 66.67
+Batch 1601|1608: loss 0.0209 f1 0.00 precision 0.00 recall 0.00
+Batch 1608|1608: loss 0.0633 f1 50.00 precision 100.00 recall 33.33
+Train: loss 0.0426 f1 53.85 precision 60.59 recall 52.66
+Time: 13885.23
+Namespace(no_train=False, train_batch_size=8, eval_batch_size=8, lr=0.0001, num_epochs=20, log_step=100, no_cuda=False, word_embedding_dim=300, use_pretrained=True, use_postag=True, postag_embedding_dim=25, hidden_size=512, dropout_rate=0.5)
+Dev: loss 0.0540 f1 51.30 precision 53.95 recall 48.91
+
+Epoch 7|20:
+Batch 1|1608: loss 0.0274 f1 66.67 precision 66.67 recall 66.67
+Epoch 1|20:
+Batch 1|1608: loss 3.4953 f1 0.00 precision 0.00 recall 0.00
+Batch 101|1608: loss 0.0197 f1 50.00 precision 50.00 recall 50.00
+Batch 101|1608: loss 0.3380 f1 0.00 precision 0.00 recall 0.00
