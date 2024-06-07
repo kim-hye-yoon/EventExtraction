@@ -1,5 +1,4 @@
 import os
-from copy import deepcopy
 
 from pyvi import ViPosTagger
 
@@ -225,24 +224,6 @@ def build_vocab_event(events_of_sents):
 
     return event2id, id2event
 
-def build_vocab_argument(arguments_of_sents):
-    argument2id = {'O': 0}
-    id_ = len(argument2id)
-    for arguments_of_sent in arguments_of_sents:
-        for argument_event_tuple in arguments_of_sent:
-            for argument_tuple in argument_event_tuple[3:]:
-                argument_type = argument_tuple[0]
-                if argument_type not in argument2id:
-                    argument2id[argument_type] = id_
-                    id_ += 1
-
-    id2argument = []
-    for key in argument2id:
-        id2argument.append(key)
-
-    return argument2id, id2argument
-
-
 class EventWordDataset(Dataset):
     def __init__(self, sents, events_of_sents, postags_of_sents,
                 word2id, event2id, postag2id, window_size):
@@ -300,77 +281,6 @@ class EventWordDataset(Dataset):
     def __len__(self):
         return len(self.data)
 
-class ArgumentWordDataset(Dataset):
-    def __init__(self, sents, arguments_of_sents, postags_of_sents,
-                word2id, argument2id, event2id, postag2id, max_length):
-
-        data = []
-        for i, sent in enumerate(sents):
-            arguments_of_sent = arguments_of_sents[i]
-            postags_of_sent = postags_of_sents[i]
-
-            for argument_of_sent in arguments_of_sent:
-                event_type = argument_of_sent[0]
-                start_trigger = argument_of_sent[1]
-                end_trigger = argument_of_sent[2]
-                argument_tuples = argument_of_sent[3:]
-                event_ids = [event2id[event_type]] * max_length
-                
-                for pos, word in enumerate(sent):
-                    input_ids = []
-                    candidate_position_ids = []
-                    trigger_position_ids = []
-                    postag_ids = []
-                    for j in range(max_length):
-                        if j < len(sent):
-                            if sent[j] in word2id:
-                                input_ids.append(word2id[sent[j]])
-                            else:
-                                input_ids.append(word2id['<unk>'])
-                            postag_ids.append(postag2id[postags_of_sent[j]])
-                        else:
-                            input_ids.append(word2id['<pad>'])
-                            postag_ids.append(postag2id['O'])
-                            
-                        candidate_position_ids.append(abs(j-pos))
-                        trigger_position_ids.append(abs(j-start_trigger))
-
-                    argument_id = argument2id['O']
-                    for argument_tuple in argument_tuples:
-                        argument_type = argument_tuple[0]
-                        start_argument = argument_tuple[1]
-                        end_argument = argument_tuple[2]
-                        if pos >= start_argument and pos <= end_argument:
-                            argument_id = argument2id[argument_type]
-
-                    tmp = dict()
-                    tmp['input_ids'] = torch.tensor(input_ids)
-                    tmp['candidate_position_ids'] = torch.tensor(candidate_position_ids)
-                    tmp['trigger_position_ids'] = torch.tensor(trigger_position_ids)
-                    tmp['postag_ids'] = torch.tensor(postag_ids)
-                    tmp['event_ids'] = torch.tensor(event_ids)
-                    tmp['start_trigger'] = torch.tensor(start_trigger)
-                    tmp['end_trigger'] = torch.tensor(end_trigger)
-                    tmp['argument_id'] = torch.tensor(argument_id)
-                    tmp['sentence_id'] = torch.tensor(i)
-                    tmp['current_position_id'] = torch.tensor(pos)
-                    data.append(tmp)
-        
-        self.data = data
-        self.sents = sents
-        self.arguments_of_sents = arguments_of_sents
-        self.postags_of_sents = postags_of_sents
-        self.word2id = word2id
-        self.argument2id = argument2id
-        self.event2id = event2id
-        self.postag2id = postag2id
-        self.max_length = max_length
-    
-    def __getitem__(self, index):
-        return self.data[index]
-    
-    def __len__(self):
-        return len(self.data)
 
 class EventSentenceDataset(Dataset):
     def __init__(self, sents, events_of_sents, postags_of_sents,
@@ -418,76 +328,6 @@ class EventSentenceDataset(Dataset):
         self.events_of_sents = events_of_sents
         self.postags_of_sents = postags_of_sents
         self.word2id = word2id
-        self.event2id = event2id
-        self.postag2id = postag2id
-        self.max_length = max_length
-    
-    def __getitem__(self, index):
-        return self.data[index]
-    
-    def __len__(self):
-        return len(self.data)
-
-class ArgumentSentenceDataset(Dataset):
-    def __init__(self, sents, arguments_of_sents, postags_of_sents,
-                word2id, argument2id, event2id, postag2id, max_length):
-
-        data = []
-        for i, sent in enumerate(sents):
-            arguments_of_sent = arguments_of_sents[i]
-            postags_of_sent = postags_of_sents[i]
-
-            for argument_of_sent in arguments_of_sent:
-                event_type = argument_of_sent[0]
-                start_trigger = argument_of_sent[1]
-                end_trigger = argument_of_sent[2]
-                argument_tuples = argument_of_sent[3:]
-                event_ids = [event2id[event_type]] * max_length
-            
-                input_ids = []
-                trigger_position_ids = []
-                postag_ids = []
-                in_sentence = []
-                for j in range(max_length):
-                    if j < len(sent):
-                        if sent[j] in word2id:
-                            input_ids.append(word2id[sent[j]])
-                        else:
-                            input_ids.append(word2id['<unk>'])
-                        postag_ids.append(postag2id[postags_of_sent[j]])
-                        in_sentence.append(1)
-                    else:
-                        input_ids.append(word2id['<pad>'])
-                        postag_ids.append(postag2id['O'])
-                        in_sentence.append(0)
-                    trigger_position_ids.append(abs(j-start_trigger))
-
-                argument_ids = [argument2id['O']] * max_length
-                for argument_tuple in argument_tuples:
-                    argument_type = argument_tuple[0]
-                    start_argument = argument_tuple[1]
-                    end_argument = argument_tuple[2]
-                    for k in range(start_argument, end_argument+1):
-                        argument_ids[k] = argument2id[argument_type]
-                
-                tmp = dict()
-                tmp['input_ids'] = torch.tensor(input_ids)
-                tmp['trigger_position_ids'] = torch.tensor(trigger_position_ids)
-                tmp['postag_ids'] = torch.tensor(postag_ids)
-                tmp['in_sentence'] = torch.tensor(in_sentence)
-                tmp['event_ids'] = torch.tensor(event_ids)
-                tmp['start_trigger'] = torch.tensor(start_trigger)
-                tmp['end_trigger'] = torch.tensor(end_trigger)
-                tmp['argument_ids'] = torch.tensor(argument_ids)
-                tmp['sentence_id'] = torch.tensor(i)
-                data.append(tmp)
-        
-        self.data = data
-        self.sents = sents
-        self.arguments_of_sents = arguments_of_sents
-        self.postags_of_sents = postags_of_sents
-        self.word2id = word2id
-        self.argument2id = argument2id
         self.event2id = event2id
         self.postag2id = postag2id
         self.max_length = max_length
