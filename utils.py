@@ -224,6 +224,7 @@ def build_vocab_event(events_of_sents):
 
     return event2id, id2event
 
+
 class EventWordDataset(Dataset):
     def __init__(self, sents, events_of_sents, postags_of_sents,
                 word2id, event2id, postag2id, window_size):
@@ -280,7 +281,6 @@ class EventWordDataset(Dataset):
     
     def __len__(self):
         return len(self.data)
-
 
 class EventSentenceDataset(Dataset):
     def __init__(self, sents, events_of_sents, postags_of_sents,

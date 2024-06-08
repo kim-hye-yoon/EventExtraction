@@ -141,11 +141,11 @@ def main(args):
 
     logger.info(str(args))
 
-    train_sents, train_postags_of_sents, train_events_of_sents, train_max_length \
+    train_sents, train_postags_of_sents, train_events_of_sents, train_arguments_of_sents, train_max_length \
         = convert_dataset_to_list('data/train')
-    dev_sents, dev_postags_of_sents, dev_events_of_sents, dev_max_length \
+    dev_sents, dev_postags_of_sents, dev_events_of_sents, dev_arguments_of_sents, dev_max_length \
         = convert_dataset_to_list('data/dev')
-    test_sents, test_postags_of_sents, test_events_of_sents, test_max_length \
+    test_sents, test_postags_of_sents, test_events_of_sents, test_arguments_of_sents, test_max_length \
         = convert_dataset_to_list('data/test')
     max_length = max(train_max_length, dev_max_length, test_max_length)
     
